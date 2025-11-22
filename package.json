@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "framer-motion": "^12.23.9",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.6"
+  }
+}

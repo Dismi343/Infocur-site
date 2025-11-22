@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap&family=Splash&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+ --font-sora: 'Sora', sans-serif;
+ --font-figtree: 'Figtree', sans-serif;
+ --font-splash:'Splash',sans-serif;
+ --animate-gradient: gradient 8s linear infinite;
+
+@keyframes gradient {
+     0% { background-position: 0% 50%; }
+     50% { background-position: 100% 50%; }
+     100% { background-position: 0% 50%; }
+ }
+}
