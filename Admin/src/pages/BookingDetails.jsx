@@ -19,7 +19,7 @@ function BookingDetails(){
             }
             setLoading(true);
             try {
-                const res = await axios.get(`http://localhost:8081/api/bookings/searchAllByEvent/${eventId}`,{
+                const res = await axios.get(`/api/bookings/searchAllByEvent/${eventId}`,{
                     params:{
                         searchText: '',
                         page:0,

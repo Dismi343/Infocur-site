@@ -66,7 +66,7 @@ const ProgressPage = () => {
       }
 
       await axios.put(
-        `http://localhost:8081/api/photo-progress/update-fields/${bookingId}`,
+        `/api/photo-progress/update-fields/${bookingId}`,
         body,
         { withCredentials: true }
       );
@@ -119,7 +119,7 @@ const ProgressPage = () => {
     try {
       setSavingStates(prev => ({ ...prev, [saveKey]: true }));
       await axios.put(
-        `http://localhost:8081/api/photo-progress/update-status/${progressId}`,
+        `/api/photo-progress/update-status/${progressId}`,
         { status: newStatus },
         { withCredentials: true }
       );
