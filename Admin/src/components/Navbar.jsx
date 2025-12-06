@@ -10,12 +10,11 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
     const navigate = useNavigate();
 
-    const [menuOpen, setMenuOpen] = useState(false);
 
     const logout = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:8081/auth/admin/logout", {}, {
+            const res = await axios.post("/auth/admin/logout", {}, {
                 withCredentials: true
             });
             if (res.status === 200) {

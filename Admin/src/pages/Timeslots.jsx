@@ -52,7 +52,7 @@ export default function TimeSlotsPage() {
             withCredentials:true
           });
 
-          const bookingRes = await axios.get(`http://localhost:8081/api/bookings/searchAllByEvent/${event.eventId}`, {
+          const bookingRes = await axios.get(`api/bookings/searchAllByEvent/${event.eventId}`, {
             params: {
               searchText: '',
               page: 0,
@@ -203,7 +203,7 @@ export default function TimeSlotsPage() {
 
       try {
         // Make API call to update only this specific session
-        await axios.put(`http://localhost:8081/api/sessions/update-session/${sessionId}`,
+        await axios.put(`api/sessions/update-session/${sessionId}`,
             newAvailable,
             {
               headers: { "Content-Type": "application/json" },

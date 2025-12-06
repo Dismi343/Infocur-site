@@ -190,7 +190,7 @@ const EventEdit = () => {
 
     try {
       console.log("event id",id);
-      await axios.put(`http://localhost:8081/api/events/update/${id}`, newFormData,{
+      await axios.put(`/api/events/update/${id}`, newFormData,{
         withCredentials:true
       });
       alert("Event updated successfully!");
