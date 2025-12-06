@@ -7,6 +7,7 @@
     {
       "source": "/auth/:path*",
       "destination": "https://infocure-backend-latest.onrender.com/auth/:path*"
-    }
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
