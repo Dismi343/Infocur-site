@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://infocure-backend-latest.onrender.com/api/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "https://infocure-backend-latest.onrender.com/auth/:path*"
+    }
+  ]
+}
