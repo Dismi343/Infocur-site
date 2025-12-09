@@ -37,7 +37,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
             console.log(file);
 
            // build image url (same as before)
-           const imageUrl = `http://localhost:8081/api/bookings/images/${file}`;
+           const imageUrl = `/api/bookings/images/${file}`;
 
            // open in-window preview instead of new tab
            setPreviewUrl(imageUrl);
@@ -51,7 +51,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
 
     const deleteEvent =async (id)=>{
         try{
-            const res = await axios.delete(`http://localhost:8081/api/bookings/delete/${id}`,{
+            const res = await axios.delete(`/api/bookings/delete/${id}`,{
                 withCredentials:true
             });
 
@@ -191,7 +191,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
 
                                         try {
                                             await axios.put(
-                                                `http://localhost:8081/api/bookings/approve/${booking.bookingId}/status`,
+                                                `/api/bookings/approve/${booking.bookingId}/status`,
                                                 { status: newStatus },
                                                 { withCredentials: true }
                                             );
