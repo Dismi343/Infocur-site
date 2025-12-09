@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,8 +8,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
-import {useState} from "react";
-
 
 
 export default function TableEventBookings({bookings = [], onRefresh}) {
@@ -37,7 +36,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
             console.log(file);
 
            // build image url (same as before)
-           const imageUrl = `http://localhost:8081/api/bookings/images/${file}`;
+           const imageUrl = `/api/bookings/images/${file}`;
 
            // open in-window preview instead of new tab
            setPreviewUrl(imageUrl);
@@ -51,7 +50,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
 
     const deleteEvent =async (id)=>{
         try{
-            const res = await axios.delete(`http://localhost:8081/api/bookings/delete/${id}`,{
+            const res = await axios.delete(`/api/bookings/delete/${id}`,{
                 withCredentials:true
             });
 
@@ -72,8 +71,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
         console.log("deleting bookingId "+selectedBookingForDelete);
         if(!selectedBookingForDelete) return ;
 
-        const id = selectedBookingForDelete;
-        await deleteEvent(id);
+       await deleteEvent(selectedBookingForDelete);
        setShowDeleteConfirm(false);
        setSelectedBookingForDelete(null);
    }
@@ -191,7 +189,7 @@ export default function TableEventBookings({bookings = [], onRefresh}) {
 
                                         try {
                                             await axios.put(
-                                                `http://localhost:8081/api/bookings/approve/${booking.bookingId}/status`,
+                                                `/api/bookings/approve/${booking.bookingId}/status`,
                                                 { status: newStatus },
                                                 { withCredentials: true }
                                             );
