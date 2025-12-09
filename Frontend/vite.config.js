@@ -11,12 +11,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://infocure-backend-latest.onrender.com',
+        target: 'https://infocuor-backend-latest.onrender.com',
         changeOrigin: true,
         secure: true
       },
       '/auth': {
-        target: 'https://infocure-backend-latest.onrender.com',
+        target: 'https://infocuor-backend-latest.onrender.com',
         changeOrigin: true,
         secure: true
       }
