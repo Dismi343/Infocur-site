@@ -126,7 +126,7 @@ function ClientBookings() {
             
 
            // build image url (same as before)
-           const imageUrl = `http://localhost:8081/api/bookings/images/${file}`;
+           const imageUrl = `/api/bookings/images/${file}`;
 
            // open in-window preview instead of new tab
            setPreviewUrl(imageUrl);

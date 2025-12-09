@@ -36,7 +36,7 @@ function ChangePassword() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8081/api/clients/update-password",
+        "/api/clients/update-password",
         {
           currentPassword: currentPassword,
           newPassword: newPassword,
