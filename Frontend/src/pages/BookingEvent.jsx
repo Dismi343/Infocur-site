@@ -129,7 +129,7 @@ function BookingEvent() {
       );
 
       const res = await axios.post(
-        "http://localhost:8081/api/bookings/create",
+        "/api/bookings/create",
         requestForm,
         {
           headers: { "Content-Type": "multipart/form-data" },
